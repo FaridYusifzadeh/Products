@@ -1,0 +1,23 @@
+.event-video-container {
+    padding: 0 88px 72px 88px;
+    width: 100%;
+    display: flex;
+    gap: 32px;
+    .event-video {
+        width: 49%;
+        height: 396px;
+    }
+}
+
+// media
+@media (max-width: 768px) {
+    .event-video-container {
+        padding: 32px 30px;
+        display: flex;
+        flex-direction: column;
+        .event-video {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+    }
+}

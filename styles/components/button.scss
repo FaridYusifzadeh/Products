@@ -1,0 +1,257 @@
+.ui-library-button {
+  cursor: pointer;
+  min-width: 95px;
+  min-height: 48px;
+  padding: 12px 20px;
+  position: relative;
+  border: 0;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: #f4f4f4;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.48;
+  background: #b90d5d;
+  transition: all ease-in-out 0.16s;
+  font-family: Poppins, sans-serif;
+
+  // Focus
+  &:focus,
+  &[btn-focus] {
+    box-shadow: 0 0 0 2px #b90d5d;
+    outline: none;
+  }
+  &-icon {
+    width: 16px;
+    height: 16px;
+  }
+  // Loading
+  &[btn-loading="true"] {
+    cursor: not-allowed;
+    svg {
+      animation-name: spin;
+      animation-duration: 3.6s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    &:active {
+      pointer-events: none;
+    }
+    &[btn-text="false"] {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 32px;
+      min-width: unset;
+      min-height: unset;
+    }
+  }
+  // Block
+  &[btn-block] {
+    width: 100%;
+  }
+  // Icon
+  &[btn-icon="true"] {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 16px 1fr;
+    grid-column-gap: 8px;
+    min-width: 96px;
+    &[btn-text="false"] {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 32px;
+      min-width: unset;
+      min-height: unset;
+    }
+  }
+  // Square Icon
+  &[btn-icon-square] {
+    border: unset;
+    padding: 7px;
+    width: 32px !important;
+    height: 32px !important;
+  }
+  // Icon Link
+  &[btn-icon-link] {
+    border: unset;
+    &:not([disabled]) {
+      &:hover,
+      &[btn-hover] {
+        border-width: 1px;
+        border-style: solid;
+      }
+      &[btn-loading="true"],
+      &:active,
+      &[btn-active] {
+        border-width: 1px;
+        border-style: solid;
+      }
+    }
+  }
+  // Default Type
+  &:not([disabled]) {
+    &:hover,
+    &[btn-hover] {
+      //TODO: Temp feature
+      color: #ffffff;
+      box-shadow: 0px 4px 4px rgba(185, 13, 93, 0.25);
+    }
+    &[btn-loading="true"],
+    &:active,
+    &[btn-active] {
+      color: #e1e1e1;
+      background-color: #100f0f;
+    }
+    [btn-loading-icon] path {
+      fill: #e1e1e1;
+    }
+    &::selection {
+      background-color: #464545;
+    }
+  }
+  // Disabled
+  &[disabled] {
+    cursor: not-allowed;
+    &:not([btn-loading="true"]) {
+      opacity: 0.48;
+    }
+    &:active {
+      pointer-events: none;
+    }
+  }
+  // Size Small
+  &[btn-size="small"] {
+    min-width: 72px;
+    min-height: 32px;
+    padding: 7px 12px;
+    font-size: 14px;
+    line-height: 1.16;
+    &[btn-loading="true"] {
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  // Size Large
+  &[btn-size="large"] {
+    min-width: 95px;
+    min-height: 48px;
+    padding: 12px 20px;
+  }
+  // Success
+  &[btn-type="success"] {
+    &:focus,
+    &[btn-focus] {
+      box-shadow: 0px 4px 4px rgba(78, 206, 86, 0.12);
+      outline: none;
+    }
+    color: #ecf6ee;
+    background: #51da59;
+    &:not([disabled]) {
+      &:hover,
+      &[btn-hover] {
+        color: #ffffff;
+        box-shadow: 0px 4px 4px rgba(78, 206, 86, 0.12);
+      }
+      &[btn-loading="true"],
+      &:active,
+      &[btn-active] {
+        color: #c9eaca;
+        background-color: #01631f;
+      }
+      [btn-loading-icon] path {
+        fill: #c9eaca;
+      }
+      &::selection {
+        background-color: #016d23;
+      }
+    }
+  }
+  // Primary
+  &[btn-type="primary"] {
+    color: #ebf4ff;
+    background-color: #0075c1;
+    &:not([disabled]) {
+      &:hover,
+      &[btn-hover] {
+        color: #ffffff;
+        background-color: #0094f1;
+      }
+      &[btn-loading="true"],
+      &:active,
+      &[btn-active] {
+        color: #cbe4ff;
+        background-color: #015892;
+      }
+      [btn-loading-icon] path {
+        fill: #cbe4ff;
+      }
+      &::selection {
+        background-color: #0161a0;
+      }
+    }
+  }
+  // Secondary
+  &[btn-type="secondary"] {
+    border-color: #727272;
+    color: #100f0f;
+    background-color: #fff;
+    &:not([disabled]) {
+      &:hover,
+      &[btn-hover] {
+        border-color: #8f8f8f;
+        color: #212120;
+        background-color: #fff;
+      }
+      &[btn-loading="true"],
+      &:active,
+      &[btn-active] {
+        border-color: #555555;
+        color: #3a3939;
+        background-color: #f5f5f5;
+      }
+      [btn-loading-icon] path {
+        fill: #3a3939;
+      }
+      &::selection {
+        background-color: #e9e9e9;
+      }
+    }
+  }
+  // Link
+  &[btn-type="link"] {
+    min-width: unset;
+    min-height: unset;
+    padding: 4px 1.5px;
+    border: none;
+    color: #aa0f01;
+    background-color: unset;
+    font-size: 14px;
+    line-height: 1.16;
+    border-radius: unset;
+    &:not([disabled]) {
+      &:hover,
+      &[btn-hover] {
+        color: #e11700;
+        background-color: unset;
+      }
+      &[btn-loading="true"],
+      &:active,
+      &[btn-active="true"] {
+        color: #411000;
+        background-color: unset;
+      }
+      &::selection {
+        background-color: #e9e9e9;
+      }
+      [btn-loading-icon] path {
+        fill: #411000;
+      }
+    }
+  }
+}

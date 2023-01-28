@@ -1,0 +1,59 @@
+footer {
+  background: url("../../assets/image/counter_bck_img.png") !important;
+  .footer-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 88px 52px;
+    .copyright {
+      p {
+        color: #fff;
+      }
+    }
+    nav {
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        li {
+          &:not(:first-child) {
+            margin: 0px 0 0px 32px;
+          }
+          a {
+            color: #ffffff;
+            transition: 0.5s;
+            font-size: 16px;
+          }
+          a:hover {
+            color: #3f79ff;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    .footer-list {
+      padding: 20px 30px;
+      display: block;
+      .copyright {
+        width: 100%;
+        margin-bottom: 32px;
+      }
+      nav {
+        ul {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(auto, 1fr));
+          grid-row-gap: 16px;
+
+          li {
+            margin: 0px !important;
+          }
+        }
+      }
+    }
+  }
+}

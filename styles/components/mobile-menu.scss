@@ -1,0 +1,38 @@
+@import "../base/variables.scss";
+
+.menuNav {
+  li {
+    box-shadow: inset 0px -1px 0px #e8ecef;
+    cursor: pointer;
+    padding: 16px 0;
+
+    a {
+      color: #586268;
+      font-family: "SF-Pro-Display-Medium";
+      font-size: 1rem;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.mobile__menu .ant-drawer-header {
+  background: #000;
+  padding: 40px 20px;
+
+  button {
+    svg {
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+
+  .ant-drawer-header-title::before {
+    content: url("../../svg/mobile-logo.svg");
+  }
+}
+.mobile__menu .ant-drawer-content-wrapper {
+  width: 100% !important;
+}

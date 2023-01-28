@@ -1,0 +1,147 @@
+.team {
+  background: url("../../assets/image/counter_bck_img.png");
+  width: 100%;
+  .team-container {
+    padding: 100px 88px;
+    .team-info {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      h1 {
+        display: inline;
+        font-size: 66px;
+        color: #fff;
+        font-weight: 700;
+        margin: 0;
+        line-height: 64px;
+        span {
+          font-size: 66px;
+          font-weight: 400;
+          line-height: 64px;
+          font-family: "SF-Pro-Display-Light";
+          color: #fff;
+        }
+      }
+      h4 {
+        color: #fff;
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+    .team-text {
+      p {
+        margin-bottom: 52px;
+        color: #fff;
+        font-size: 24px;
+      }
+    }
+    .team-card {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .cards {
+        &:not(:last-child) {
+          margin-bottom: 72px;
+        }
+        width: 25%;
+        h3 {
+          color: #fff;
+          font-size: 32px;
+          font-weight: 100;
+          margin: 0;
+          font-family: "SF-Pro-Display-Regular";
+        }
+        p {
+          color: #959fa5;
+          font-size: 20px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .team {
+    border-bottom: 1px solid #444141;
+    padding: 32px 0;
+    .team-container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0;
+      .team-text {
+        p {
+          font-size: 16px;
+        }
+      }
+      .team-card {
+        .cards {
+          h3 {
+            font-size: 24px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .team {
+    padding: 32px 30px;
+    .team-container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0;
+      p {
+        font-size: 16px;
+      }
+      .team-card {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        .cards {
+          width: 100%;
+          margin-bottom: 20px !important;
+          padding: 0 10px;
+          h3 {
+            font-size: 24px;
+            margin: 0;
+          }
+          p {
+            font-size: 16px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .team {
+    .team-container {
+      .team-info {
+        padding: 0px 25px;
+        h1 {
+          font-size: 18px;
+          span {
+            font-size: 18px;
+          }
+        }
+        h4 {
+          font-size: 12px;
+        }
+      }
+      .team-text {
+        p {
+          padding: 0 25px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.counter-section {
+  padding: 100px 88px;
+  background-image: url("../../assets/image/counter_bck_img.png");
+  .rating-boxes {
+    display: flex;
+    justify-content: space-around;
+    .rating-box {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+      text-align: center;
+      span {
+        line-height: 56px;
+        font-size: 3rem;
+        color: #fff;
+        font-family: "SF-Pro-Display-Bold";
+        font-style: normal;
+        font-weight: 500;
+      }
+      p {
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        color: #fff;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .counter-section {
+    .rating-boxes {
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 468px) {
+  .counter-section{
+    padding: 52px 129px;
+    .rating-boxes {
+      .rating-box {
+        &:not(:last-child){
+          padding-bottom: 52px;
+        }
+      }
+    }
+  }
+}

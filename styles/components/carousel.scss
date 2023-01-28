@@ -1,0 +1,104 @@
+.carousel {
+  overflow: hidden;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+
+.carousel-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  color: #fff;
+  height: 700px;
+  .title {
+    padding-left: 86px;
+    padding-top: 100px;
+    h1 {
+      font-size: 4.25rem;
+      font-style: normal;
+      font-weight: 700;
+      color: #fff;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      line-height: 80px;
+    }
+  }
+  .home-slider1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-image: url("../../public/photo_2022-06-21_19-12-54.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+
+  .home-slider2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-image: url("../../public/photo_2022-06-21_19-12-54.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+
+  .home-slider3 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-image: url("../../public/photo_2022-06-21_19-12-54.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+}
+
+.indicators > button {
+  margin: 5px;
+}
+
+.indicators > button.active {
+  background-color: green;
+  color: #fff;
+}
+
+@media (max-width: 990px) {
+  .carousel-item {
+    .title {
+      h1 {
+        font-size: 48px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-item {
+    .title {
+      h1 {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .carousel-item {
+    .title {
+      h1 {
+        font-size: 24px;
+      }
+    }
+  }
+}

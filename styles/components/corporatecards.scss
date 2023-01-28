@@ -1,0 +1,48 @@
+.corporate-cards {
+    padding: 0 88px 72px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 1fr));
+    grid-row-gap: 32px;
+    grid-column-gap: 32px;
+    .cards {
+        background: linear-gradient(162.1deg, rgba(255, 255, 255, 0.7) 4.67%, rgba(255, 255, 255, 0.7) 87.8%);
+        box-shadow: 40px 20px 100px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        overflow: hidden;
+        cursor: pointer;
+        .card {
+            position: relative;
+            margin: 32px 19px;
+            width: 228px;
+            height: 228px;
+        }
+    }
+}
+
+
+// media
+@media screen and (max-width: 768px) {
+    .corporate-cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(auto, 1fr));
+        grid-row-gap: 32px;
+        grid-column-gap: 32px;
+        padding: 0 76px 72px;
+    }
+}
+
+
+@media screen and (max-width: 468px) {
+    .corporate-cards {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(auto, 1fr));
+        grid-row-gap: 32px;
+        grid-column-gap: 32px;
+        padding: 0 32px 52px;
+        .cards{
+            .card{
+                margin: 32px 84px;
+            }
+        }
+    }
+}

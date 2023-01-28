@@ -1,0 +1,147 @@
+@import "../base/variables.scss";
+
+.why-ingress-container {
+  padding: 72px 0 72px 88px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  .why-ingress-info {
+    .why-ingress-title {
+      display: flex;
+      margin-bottom: 8px;
+
+      & > h1:first-child {
+        font-size: size(66);
+        font-style: normal;
+        font-weight: 700;
+        line-height: 84px;
+        color: $black;
+        margin-right: 10px;
+        margin-bottom: 0;
+      }
+
+      & > h1:last-child {
+        font-size: size(66);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 84px;
+        color: $black;
+        margin: 0;
+      }
+    }
+    h6 {
+      color: $darkGrey;
+      font-size: size(24);
+      font-style: normal;
+      font-weight: 600;
+      margin-bottom: 52px;
+      del {
+        color: $primary;
+        font-size: size(24);
+        font-style: normal;
+        font-weight: 600;
+        margin-bottom: 52px;
+        margin: 0px 10px;
+        text-decoration: line-through;
+      }
+    }
+    p {
+      font-size: size(20);
+      font-style: normal;
+      font-weight: 400;
+      text-align: justified;
+      line-height: 32px;
+      color: $black;
+      width: 616px;
+      margin-bottom: 32px;
+    }
+    .ant-btn {
+      padding: 11px 49px;
+      background: #2e3131;
+      border-color: #2e3131;
+      border-radius: 4px;
+      height: auto;
+      display: flex;
+      align-items: center;
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .wii-wrapper {
+    height: 500px;
+    .why-ingress-img {
+      margin-right: -88px;
+    }
+  }
+}
+
+@media screen and (max-width: 944px) {
+  .why-ingress-container {
+    .why-ingress-info {
+      p {
+        width: 100%;
+        height: auto;
+        margin-bottom: 32px !important;
+      }
+      .why-ingress-title {
+        h1 {
+          font-size: size(40) !important;
+        }
+      }
+      button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    h6 {
+      font-size: size(20) !important;
+      del {
+        font-size: size(20) !important;
+      }
+    }
+    p {
+      font-size: size(18) !important;
+    }
+
+    .wii-wrapper {
+      display: none !important;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .why-ingress-container {
+    padding: 32px 30px;
+    .why-ingress-info {
+      .why-ingress-title {
+        margin-bottom: 0;
+        h1 {
+          font-size: 24px !important;
+          line-height: 48px !important;
+
+          margin-bottom: 0;
+        }
+      }
+    }
+    h6 {
+      font-size: size(16) !important;
+      margin-bottom: 32px !important;
+      del {
+        font-size: size(16) !important;
+      }
+    }
+    p {
+      font-size: size(16) !important;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .why-ingress-container {
+    h6 {
+      margin-bottom: 16px !important;
+    }
+  }
+}

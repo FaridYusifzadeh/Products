@@ -1,0 +1,53 @@
+$base-size: 16;
+
+@function size($target) {
+  @return ($target/$base-size) + rem;
+}
+
+// section paddings
+$paddingHorizotal: 88px;
+$paddingVertical: 72px;
+
+$radius-sm: 4px;
+$radius-m: 6px;
+
+$margin: 32px;
+$padding: 32px;
+
+$mobileMarginHorizontal: 23px;
+$mobileMarginVertical: 20px;
+
+// ------------------------------typography
+$regular: "SF-Pro-Display-Regular";
+$light: "SF-Pro-Display-Light";
+$medium: "SF-Pro-Display-Medium";
+$bold: "SF-Pro-Display-Bold";
+
+// ------------------------------ colors
+
+$colors: (
+  "black": #2e3131,
+  "lightWhite": #ffffff03,
+  "white ": #ffffff,
+  "primary": #3f79ff,
+  "grey": #f3f5f8,
+  "darkGrey": #586268,
+  "lightGrey": #849097,
+  "lightGrey2": #e4e8ee,
+  "lightGrey3": #e8ecf1,
+  "error": #f4797b,
+  "success": #61ba66,
+);
+
+$black: #2e3131;
+$white: #ffffff;
+$lightWhite: #ffffff03;
+$primary: #3f79ff;
+$grey: #f3f5f8;
+$darkGrey: #586268;
+$lightGrey: #849097;
+$lightGrey2: #e4e8ee;
+$lightGrey3: #e8ecf1;
+$success: #61ba66;
+$error: #f4797b;
+$aqua: #647b9c;
